@@ -46,8 +46,8 @@ mpu.bin \
 all: mpu.elf secondary-outputs
 
 # Tool invocations
-mpu.elf: $(OBJS) $(USER_OBJS) C:\Users\rochi\STM32CubeIDE\workspace_1.4.0\mpu\STM32F303RETX_FLASH.ld
-	arm-none-eabi-gcc -o "mpu.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\rochi\STM32CubeIDE\workspace_1.4.0\mpu\STM32F303RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mpu.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+mpu.elf: $(OBJS) $(USER_OBJS) C:\repositories\tps-mecat\tp2-sensor-fusion\sensor-fusion-stm\STM32F303RETX_FLASH.ld
+	arm-none-eabi-gcc -o "mpu.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\repositories\tps-mecat\tp2-sensor-fusion\sensor-fusion-stm\STM32F303RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mpu.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

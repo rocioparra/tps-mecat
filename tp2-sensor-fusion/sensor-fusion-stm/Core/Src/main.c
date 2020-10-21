@@ -24,7 +24,10 @@
 /* USER CODE BEGIN Includes */
 //#include "stm32f3xx_hal_def.h"
 #include "mpu6500.h"
+#include "madgwick.h"
 #include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
 
 /* USER CODE END Includes */
 
@@ -35,6 +38,12 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+
+#define SENSOR_DATA_N	6
+#define QUAT_DATA_N		4
+#define BUFF_N 			(SENSOR_DATA_N+QUAT_DATA_N)
+#define BUFF_SIZE		((BUFF_N*sizeof(float))+3)
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -45,10 +54,12 @@
 /* Private variables ---------------------------------------------------------*/
 I2C_HandleTypeDef hi2c1;
 
+TIM_HandleTypeDef htim6;
+
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-
+bool timer_elapsed = false;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -56,16 +67,18 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_USART2_UART_Init(void);
 static void MX_I2C1_Init(void);
+static void MX_TIM6_Init(void);
 /* USER CODE BEGIN PFP */
 
 HAL_StatusTypeDef MPU_Init(I2C_HandleTypeDef * hi2c);
-
-HAL_StatusTypeDef MPU_ReadData(I2C_HandleTypeDef * hi2c, MPU_data_t * d);
+HAL_StatusTypeDef MPU_ReadData(I2C_HandleTypeDef * hi2c, float * d);
+void sendQuatData(float * data);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+float fbuffer[BUFF_N];
+unsigned char cbuffer[BUFF_SIZE];
 /* USER CODE END 0 */
 
 /**
@@ -98,6 +111,7 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   MX_I2C1_Init();
+  MX_TIM6_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
@@ -106,43 +120,27 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 
   MPU_Init(&hi2c1);
+  HAL_TIM_Base_Start_IT(&htim6);
+
+  cbuffer[0] = 'A';
+  cbuffer[3*sizeof(float)+1] = 'G';
+  cbuffer[6*sizeof(float)+2] = 'Q';
 
   while (1)
   {
     /* USER CODE END WHILE */
-	 MPU_data_t d;
-	 HAL_StatusTypeDef status = MPU_ReadData(&hi2c1, &d);
-	 if (status == HAL_OK) {
-		 int16_t dd[6];
-		 dd[0] = (int16_t)(100.0*d.accel.x);
-		 dd[1] = (int16_t)(100.0*d.accel.y);
-		 dd[2] = (int16_t)(100.0*d.accel.z);
-		 dd[3] = (int16_t)d.gyro.x;
-		 dd[4] = (int16_t)d.gyro.y;
-		 dd[5] = (int16_t)d.gyro.z;
 
-		 unsigned char buffer[500];
-		 int n = sprintf((char *)buffer, "Acc: X=%d, Y=%d, Z=%d --- Gyro: X=%d, Y=%d, Z=%d\r\n",
-				 dd[0], dd[1], dd[2], dd[3], dd[4], dd[5]);
-		 HAL_UART_Transmit(&huart2, buffer, n, 1000);
-//		 for (unsigned int i = 0; i < 6; i++) {
-//			 unsigned char buffer[100];
-//			 int n = sprintf((char *)buffer, "%d", dd[i]);
-//			 if (n >=0 &&  n < 100) {
-//				 status = HAL_UART_Transmit(&huart2, buffer, n, 1000);
-//				 if (status != HAL_OK) {
-//					 break;
-//				 }
-//			 }
-//		 }
-//
-		 HAL_Delay(1000); // wait one second
-	 }
     /* USER CODE BEGIN 3 */
+
+	  if (timer_elapsed) {
+		  timer_elapsed = false;
+		  MPU_ReadData(&hi2c1, fbuffer);
+		  filterUpdate(fbuffer, &fbuffer[SENSOR_DATA_N]);
+		  sendQuatData(fbuffer);
+	  }
   }
   /* USER CODE END 3 */
 }
-
 
 /**
   * @brief System Clock Configuration
@@ -206,7 +204,7 @@ static void MX_I2C1_Init(void)
 
   /* USER CODE END I2C1_Init 1 */
   hi2c1.Instance = I2C1;
-  hi2c1.Init.Timing = 0x2000090E;
+  hi2c1.Init.Timing = 0x0000020B;
   hi2c1.Init.OwnAddress1 = 0;
   hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
   hi2c1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
@@ -237,6 +235,44 @@ static void MX_I2C1_Init(void)
 }
 
 /**
+  * @brief TIM6 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM6_Init(void)
+{
+
+  /* USER CODE BEGIN TIM6_Init 0 */
+
+  /* USER CODE END TIM6_Init 0 */
+
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM6_Init 1 */
+
+  /* USER CODE END TIM6_Init 1 */
+  htim6.Instance = TIM6;
+  htim6.Init.Prescaler = 7200;
+  htim6.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim6.Init.Period = 99;
+  htim6.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim6) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim6, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM6_Init 2 */
+
+  /* USER CODE END TIM6_Init 2 */
+
+}
+
+/**
   * @brief USART2 Initialization Function
   * @param None
   * @retval None
@@ -252,7 +288,7 @@ static void MX_USART2_UART_Init(void)
 
   /* USER CODE END USART2_Init 1 */
   huart2.Instance = USART2;
-  huart2.Init.BaudRate = 38400;
+  huart2.Init.BaudRate = 115200;
   huart2.Init.WordLength = UART_WORDLENGTH_8B;
   huart2.Init.StopBits = UART_STOPBITS_1;
   huart2.Init.Parity = UART_PARITY_NONE;
@@ -306,36 +342,21 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 
-/* USER CODE END 4 */
-
-/**
-  * @brief  This function is executed in case of error occurrence.
-  * @retval None
-  */
-void Error_Handler(void)
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-  /* USER CODE BEGIN Error_Handler_Debug */
-  /* User can add his own implementation to report the HAL error return state */
-
-  /* USER CODE END Error_Handler_Debug */
+	if (htim == &htim6) {
+		timer_elapsed = true;
+	}
 }
 
-#ifdef  USE_FULL_ASSERT
-/**
-  * @brief  Reports the name of the source file and the source line number
-  *         where the assert_param error has occurred.
-  * @param  file: pointer to the source file name
-  * @param  line: assert_param error line source number
-  * @retval None
-  */
-void assert_failed(uint8_t *file, uint32_t line)
+void sendQuatData(float * data)
 {
-  /* USER CODE BEGIN 6 */
-  /* User can add his own implementation to report the file name and line number,
-     tex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
-  /* USER CODE END 6 */
+	memcpy(&cbuffer[1], (char *)data, 3*sizeof(float));
+	memcpy(&cbuffer[3*sizeof(float)+2], (char *)&data[3], 3*sizeof(float));
+	memcpy(&cbuffer[6*sizeof(float)+3], (char *)&data[6], 4*sizeof(float));
+
+	HAL_UART_Transmit(&huart2, cbuffer, BUFF_SIZE, 5);
 }
-#endif /* USE_FULL_ASSERT */
 
 HAL_StatusTypeDef MPU_Init(I2C_HandleTypeDef * hi2c)
 {
@@ -376,7 +397,7 @@ HAL_StatusTypeDef MPU_Init(I2C_HandleTypeDef * hi2c)
 
 
 
-HAL_StatusTypeDef MPU_ReadData(I2C_HandleTypeDef * hi2c, MPU_data_t * d)
+HAL_StatusTypeDef MPU_ReadData(I2C_HandleTypeDef * hi2c, float * d)
 {
 	// Read 6 BYTES of data starting from ACCEL_XOUT_H register
 	HAL_StatusTypeDef status = HAL_ERROR;
@@ -395,9 +416,9 @@ HAL_StatusTypeDef MPU_ReadData(I2C_HandleTypeDef * hi2c, MPU_data_t * d)
 				 I have configured FS_SEL = 0. So I am dividing by 16384.0
 				 for more details check ACCEL_CONFIG Register              ****/
 
-			d->accel.x = accel_X_RAW/16384.0;  // get the float g
-			d->accel.y = accel_Y_RAW/16384.0;
-			d->accel.z = accel_Z_RAW/16384.0;
+			d[0] = accel_X_RAW/16384.0;  // get the float g
+			d[1] = accel_Y_RAW/16384.0;
+			d[2] = accel_Z_RAW/16384.0;
 
 			status = HAL_I2C_Mem_Read(hi2c, MPU_ADDR, MPU_GYRO_OUT, 1, buffer, 6, MPU_TIMEOUT);
 
@@ -412,9 +433,9 @@ HAL_StatusTypeDef MPU_ReadData(I2C_HandleTypeDef * hi2c, MPU_data_t * d)
 					 I have configured FS_SEL = 0. So I am dividing by 131.0
 					 for more details check GYRO_CONFIG Register              ****/
 
-				d->gyro.x = Gyro_X_RAW/131.0;
-				d->gyro.y = Gyro_Y_RAW/131.0;
-				d->gyro.z = Gyro_Z_RAW/131.0;
+				d[3] = Gyro_X_RAW/131.0;
+				d[4] = Gyro_Y_RAW/131.0;
+				d[5] = Gyro_Z_RAW/131.0;
 			}
 		}
 	}
@@ -422,5 +443,38 @@ HAL_StatusTypeDef MPU_ReadData(I2C_HandleTypeDef * hi2c, MPU_data_t * d)
 	return status;
 }
 
+
+
+
+/* USER CODE END 4 */
+
+/**
+  * @brief  This function is executed in case of error occurrence.
+  * @retval None
+  */
+void Error_Handler(void)
+{
+  /* USER CODE BEGIN Error_Handler_Debug */
+  /* User can add his own implementation to report the HAL error return state */
+
+  /* USER CODE END Error_Handler_Debug */
+}
+
+#ifdef  USE_FULL_ASSERT
+/**
+  * @brief  Reports the name of the source file and the source line number
+  *         where the assert_param error has occurred.
+  * @param  file: pointer to the source file name
+  * @param  line: assert_param error line source number
+  * @retval None
+  */
+void assert_failed(uint8_t *file, uint32_t line)
+{
+  /* USER CODE BEGIN 6 */
+  /* User can add his own implementation to report the file name and line number,
+     tex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+  /* USER CODE END 6 */
+}
+#endif /* USE_FULL_ASSERT */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

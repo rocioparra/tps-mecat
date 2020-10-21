@@ -80,16 +80,5 @@
 #define MPU_DIV			((uint8_t)8000/MPU_MAX_SMPLRT-1)
 #define MPU_SMPLRT		(MPU_MAX_SMPLRT/(MPU_DIV+1))
 
-typedef struct d1 {
-	float x;
-	float y;
-	float z;
-} MPU_sensor_data_t;
-
-typedef struct d2 {
-	MPU_sensor_data_t accel;
-	MPU_sensor_data_t gyro;
-} MPU_data_t;
-
 
 #endif /* INC_MPU6500_H_ */

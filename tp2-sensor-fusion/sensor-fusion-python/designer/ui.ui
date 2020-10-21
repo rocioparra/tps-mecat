@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1366</width>
+    <height>676</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QSplitter" name="splitter_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>1341</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <widget class="QSplitter" name="splitter">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <widget class="QLabel" name="label_roll">
+      <property name="font">
+       <font>
+        <pointsize>25</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Roll</string>
+      </property>
+     </widget>
+     <widget class="QGraphicsView" name="graphicsView_roll_t"/>
+     <widget class="QGraphicsView" name="graphicsView_roll_f"/>
+     <widget class="QLabel" name="label_pitch">
+      <property name="font">
+       <font>
+        <pointsize>25</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Pitch</string>
+      </property>
+     </widget>
+     <widget class="QGraphicsView" name="graphicsView_pitch_t"/>
+     <widget class="QGraphicsView" name="graphicsView_pitch_f"/>
+    </widget>
+    <widget class="QWidget" name="">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="8" column="2">
+       <widget class="QGraphicsView" name="graphicsView_gyro_z_f"/>
+      </item>
+      <item row="8" column="0">
+       <widget class="QGraphicsView" name="graphicsView_gyro_x_f"/>
+      </item>
+      <item row="5" column="1">
+       <widget class="QLabel" name="label_gyro">
+        <property name="font">
+         <font>
+          <pointsize>25</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Gyroscope</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QGraphicsView" name="graphicsView_acc_z_t"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_acc_x">
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>X</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QGraphicsView" name="graphicsView_acc_y_f"/>
+      </item>
+      <item row="6" column="1">
+       <widget class="QLabel" name="label_gyro_y">
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Y</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="2">
+       <widget class="QLabel" name="label_gyro_z">
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Z</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QGraphicsView" name="graphicsView_acc_x_t"/>
+      </item>
+      <item row="2" column="1">
+       <widget class="QGraphicsView" name="graphicsView_acc_y_t"/>
+      </item>
+      <item row="7" column="1">
+       <widget class="QGraphicsView" name="graphicsView_gyro_y_t"/>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="label_gyro_x">
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>X</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QGraphicsView" name="graphicsView_acc_z_f"/>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="label_acc_y">
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Y</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QGraphicsView" name="graphicsView_acc_x_f"/>
+      </item>
+      <item row="7" column="0">
+       <widget class="QGraphicsView" name="graphicsView_gyro_x_t"/>
+      </item>
+      <item row="8" column="1">
+       <widget class="QGraphicsView" name="graphicsView_gyro_y_f"/>
+      </item>
+      <item row="7" column="2">
+       <widget class="QGraphicsView" name="graphicsView_gyro_z_t"/>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="label_acc">
+        <property name="font">
+         <font>
+          <pointsize>25</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Accelerometer</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="label_acc_z">
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Z</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1366</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuConnect">
+    <property name="title">
+     <string>Settings</string>
+    </property>
+    <addaction name="actionConnect"/>
+    <addaction name="actionUART_Config"/>
+   </widget>
+   <widget class="QMenu" name="menuSimulation">
+    <property name="title">
+     <string>Simulation</string>
+    </property>
+    <addaction name="actionStart_2"/>
+   </widget>
+   <addaction name="menuConnect"/>
+   <addaction name="menuSimulation"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionConnect">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Connect</string>
+   </property>
+  </action>
+  <action name="actionStart">
+   <property name="text">
+    <string>Start</string>
+   </property>
+  </action>
+  <action name="actionStop">
+   <property name="text">
+    <string>Stop</string>
+   </property>
+  </action>
+  <action name="actionStart_2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Start</string>
+   </property>
+  </action>
+  <action name="actionStop_2">
+   <property name="text">
+    <string>Stop</string>
+   </property>
+  </action>
+  <action name="actionUART_Config">
+   <property name="text">
+    <string>UART Config</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

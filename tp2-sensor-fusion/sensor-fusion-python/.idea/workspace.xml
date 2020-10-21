@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="679b6894-e2f7-4aa2-85cd-b7d789bde2d0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/gui.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sensorFusion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sensor-fusion-stm/.cproject" beforeDir="false" afterPath="$PROJECT_DIR$/../sensor-fusion-stm/.cproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sensor-fusion-stm/.mxproject" beforeDir="false" afterPath="$PROJECT_DIR$/../sensor-fusion-stm/.mxproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sensor-fusion-stm/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sensor-fusion-stm/CMakeLists_template.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sensor-fusion-stm/Core/Inc/stm32f3xx_hal_conf.h" beforeDir="false" afterPath="$PROJECT_DIR$/../sensor-fusion-stm/Core/Inc/stm32f3xx_hal_conf.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sensor-fusion-stm/Core/Inc/stm32f3xx_it.h" beforeDir="false" afterPath="$PROJECT_DIR$/../sensor-fusion-stm/Core/Inc/stm32f3xx_it.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sensor-fusion-stm/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../sensor-fusion-stm/Core/Src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sensor-fusion-stm/Core/Src/stm32f3xx_hal_msp.c" beforeDir="false" afterPath="$PROJECT_DIR$/../sensor-fusion-stm/Core/Src/stm32f3xx_hal_msp.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sensor-fusion-stm/Core/Src/stm32f3xx_it.c" beforeDir="false" afterPath="$PROJECT_DIR$/../sensor-fusion-stm/Core/Src/stm32f3xx_it.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sensor-fusion-stm/Debug/Core/Src/subdir.mk" beforeDir="false" afterPath="$PROJECT_DIR$/../sensor-fusion-stm/Debug/Core/Src/subdir.mk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sensor-fusion-stm/Debug/makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../sensor-fusion-stm/Debug/makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sensor-fusion-stm/Debug/mpu.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../sensor-fusion-stm/Debug/mpu.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sensor-fusion-stm/Debug/mpu.list" beforeDir="false" afterPath="$PROJECT_DIR$/../sensor-fusion-stm/Debug/mpu.list" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sensor-fusion-stm/Debug/objects.list" beforeDir="false" afterPath="$PROJECT_DIR$/../sensor-fusion-stm/Debug/objects.list" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sensor-fusion-stm/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sensor-fusion-stm/cmake-build-debug/CMakeFiles/3.16.5/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sensor-fusion-stm/cmake-build-debug/CMakeFiles/3.16.5/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sensor-fusion-stm/cmake-build-debug/CMakeFiles/3.16.5/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sensor-fusion-stm/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sensor-fusion-stm/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sensor-fusion-stm/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sensor-fusion-stm/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sensor-fusion-stm/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sensor-fusion-stm/mpu.ioc" beforeDir="false" afterPath="$PROJECT_DIR$/../sensor-fusion-stm/mpu.ioc" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1iveNLmWjgDLAQZfBH7VGYG0rOR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pyqt5-tutorials-master" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.idesettings.debugger.python" />
+  </component>
+  <component name="RunManager" selected="Python.app">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="sensor-fusion-python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\repositories\tps-mecat\tp2-sensor-fusion\sensor-fusion-python\app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="gui" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="sensor-fusion-python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gui.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="myPlotWidget" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="sensor-fusion-python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\repositories\tps-mecat\tp2-sensor-fusion\sensor-fusion-python\myPlotWidget.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sensorFusion" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="sensor-fusion-python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\repositories\tps-mecat\tp2-sensor-fusion\sensor-fusion-python\sensorFusion.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="uart_config" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="sensor-fusion-python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/designer" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/designer/uart_config.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.app" />
+        <item itemvalue="Python.uart_config" />
+        <item itemvalue="Python.sensorFusion" />
+        <item itemvalue="Python.myPlotWidget" />
+        <item itemvalue="Python.gui" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="679b6894-e2f7-4aa2-85cd-b7d789bde2d0" name="Default Changelist" comment="" />
+      <created>1602792451703</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602792451703</updated>
+      <workItem from="1602792453036" duration="9861000" />
+      <workItem from="1602889140725" duration="599000" />
+      <workItem from="1602938254841" duration="601000" />
+      <workItem from="1602971272118" duration="9383000" />
+      <workItem from="1603025038058" duration="10754000" />
+      <workItem from="1603059816514" duration="4247000" />
+      <workItem from="1603113268080" duration="14083000" />
+      <workItem from="1603138099634" duration="5369000" />
+      <workItem from="1603145557074" duration="11746000" />
+      <workItem from="1603201328767" duration="3618000" />
+      <workItem from="1603218722454" duration="12666000" />
+      <workItem from="1603299151227" duration="11475000" />
+      <workItem from="1603312943854" duration="6726000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="710" y="134" width="1222" height="588" key="#xdebugger.evaluate" timestamp="1603319359131">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="-1222" y="143" width="1222" height="588" key="#xdebugger.evaluate/0.0.1366.728/-1920.-309.1920.1040@0.0.1366.728" timestamp="1603030657342" />
+    <state x="710" y="134" key="#xdebugger.evaluate/0.0.1366.728/1366.-547.1920.1040@0.0.1366.728" timestamp="1603319359131" />
+    <state x="2064" y="-101" key="#xdebugger.evaluate/0.0.1366.728/1366.-547.1920.1040@1366.-547.1920.1040" timestamp="1603121269217" />
+    <state x="764" y="64" key="#xdebugger.evaluate/0.0.1366.728/1428.-547.1858.1080@0.0.1366.728" timestamp="1603221184054" />
+    <state x="2103" y="-84" key="#xdebugger.evaluate/0.0.1366.728/1428.-547.1858.1080@1428.-547.1858.1080" timestamp="1603287082487" />
+    <state x="438" y="67" key="#xdebugger.evaluate/0.0.1366.728@0.0.1366.728" timestamp="1602793401145" />
+    <state width="1105" height="466" key="DebuggerActiveHint" timestamp="1603029544642">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1105" height="466" key="DebuggerActiveHint/0.0.1366.728/-1920.-309.1920.1040@0.0.1366.728" timestamp="1603029544642" />
+    <state x="2106" y="-272" key="FileChooserDialogImpl" timestamp="1603144883073">
+      <screen x="1366" y="-547" width="1920" height="1040" />
+    </state>
+    <state x="2106" y="-272" key="FileChooserDialogImpl/0.0.1366.728/1366.-547.1920.1040@1366.-547.1920.1040" timestamp="1603144883073" />
+    <state width="1323" height="2" key="GridCell.Tab.0.bottom" timestamp="1603320137729">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="936" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728/-1920.-309.1920.1040@0.0.1366.728" timestamp="1603036907742" />
+    <state width="1323" height="2" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-547.1920.1040@0.0.1366.728" timestamp="1603320137729" />
+    <state width="1877" height="246" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-547.1920.1040@1366.-547.1920.1040" timestamp="1603318671434" />
+    <state width="1323" height="135" key="GridCell.Tab.0.bottom/0.0.1366.728/1428.-547.1858.1080@0.0.1366.728" timestamp="1603222505227" />
+    <state width="1815" height="135" key="GridCell.Tab.0.bottom/0.0.1366.728/1428.-547.1858.1080@1428.-547.1858.1080" timestamp="1603290701224" />
+    <state width="1047" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1602988867654" />
+    <state width="1323" height="2" key="GridCell.Tab.0.center" timestamp="1603320137729">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="936" height="223" key="GridCell.Tab.0.center/0.0.1366.728/-1920.-309.1920.1040@0.0.1366.728" timestamp="1603036907742" />
+    <state width="1323" height="2" key="GridCell.Tab.0.center/0.0.1366.728/1366.-547.1920.1040@0.0.1366.728" timestamp="1603320137729" />
+    <state width="1877" height="246" key="GridCell.Tab.0.center/0.0.1366.728/1366.-547.1920.1040@1366.-547.1920.1040" timestamp="1603318671434" />
+    <state width="1323" height="135" key="GridCell.Tab.0.center/0.0.1366.728/1428.-547.1858.1080@0.0.1366.728" timestamp="1603222505227" />
+    <state width="1815" height="135" key="GridCell.Tab.0.center/0.0.1366.728/1428.-547.1858.1080@1428.-547.1858.1080" timestamp="1603290701224" />
+    <state width="1047" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1602988867653" />
+    <state width="1323" height="2" key="GridCell.Tab.0.left" timestamp="1603320137729">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="936" height="223" key="GridCell.Tab.0.left/0.0.1366.728/-1920.-309.1920.1040@0.0.1366.728" timestamp="1603036907742" />
+    <state width="1323" height="2" key="GridCell.Tab.0.left/0.0.1366.728/1366.-547.1920.1040@0.0.1366.728" timestamp="1603320137729" />
+    <state width="1877" height="246" key="GridCell.Tab.0.left/0.0.1366.728/1366.-547.1920.1040@1366.-547.1920.1040" timestamp="1603318671434" />
+    <state width="1323" height="135" key="GridCell.Tab.0.left/0.0.1366.728/1428.-547.1858.1080@0.0.1366.728" timestamp="1603222505227" />
+    <state width="1815" height="135" key="GridCell.Tab.0.left/0.0.1366.728/1428.-547.1858.1080@1428.-547.1858.1080" timestamp="1603290701224" />
+    <state width="1047" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1602988867653" />
+    <state width="1323" height="2" key="GridCell.Tab.0.right" timestamp="1603320137729">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="936" height="223" key="GridCell.Tab.0.right/0.0.1366.728/-1920.-309.1920.1040@0.0.1366.728" timestamp="1603036907742" />
+    <state width="1323" height="2" key="GridCell.Tab.0.right/0.0.1366.728/1366.-547.1920.1040@0.0.1366.728" timestamp="1603320137729" />
+    <state width="1877" height="246" key="GridCell.Tab.0.right/0.0.1366.728/1366.-547.1920.1040@1366.-547.1920.1040" timestamp="1603318671434" />
+    <state width="1323" height="135" key="GridCell.Tab.0.right/0.0.1366.728/1428.-547.1858.1080@0.0.1366.728" timestamp="1603222505227" />
+    <state width="1815" height="135" key="GridCell.Tab.0.right/0.0.1366.728/1428.-547.1858.1080@1428.-547.1858.1080" timestamp="1603290701224" />
+    <state width="1047" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1602988867654" />
+    <state width="1323" height="219" key="GridCell.Tab.1.bottom" timestamp="1603319463390">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="936" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728/-1920.-309.1920.1040@0.0.1366.728" timestamp="1603036907742" />
+    <state width="1323" height="219" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.-547.1920.1040@0.0.1366.728" timestamp="1603319463390" />
+    <state width="1815" height="359" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.-547.1920.1040@1366.-547.1920.1040" timestamp="1603292293740" />
+    <state width="1323" height="220" key="GridCell.Tab.1.bottom/0.0.1366.728/1428.-547.1858.1080@0.0.1366.728" timestamp="1603222188584" />
+    <state width="1815" height="359" key="GridCell.Tab.1.bottom/0.0.1366.728/1428.-547.1858.1080@1428.-547.1858.1080" timestamp="1603289052419" />
+    <state width="945" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1602988867566" />
+    <state width="1323" height="219" key="GridCell.Tab.1.center" timestamp="1603319463390">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="936" height="223" key="GridCell.Tab.1.center/0.0.1366.728/-1920.-309.1920.1040@0.0.1366.728" timestamp="1603036907742" />
+    <state width="1323" height="219" key="GridCell.Tab.1.center/0.0.1366.728/1366.-547.1920.1040@0.0.1366.728" timestamp="1603319463390" />
+    <state width="1815" height="359" key="GridCell.Tab.1.center/0.0.1366.728/1366.-547.1920.1040@1366.-547.1920.1040" timestamp="1603292293740" />
+    <state width="1323" height="220" key="GridCell.Tab.1.center/0.0.1366.728/1428.-547.1858.1080@0.0.1366.728" timestamp="1603222188584" />
+    <state width="1815" height="359" key="GridCell.Tab.1.center/0.0.1366.728/1428.-547.1858.1080@1428.-547.1858.1080" timestamp="1603289052419" />
+    <state width="945" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1602988867566" />
+    <state width="1323" height="219" key="GridCell.Tab.1.left" timestamp="1603319463390">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="936" height="223" key="GridCell.Tab.1.left/0.0.1366.728/-1920.-309.1920.1040@0.0.1366.728" timestamp="1603036907742" />
+    <state width="1323" height="219" key="GridCell.Tab.1.left/0.0.1366.728/1366.-547.1920.1040@0.0.1366.728" timestamp="1603319463390" />
+    <state width="1815" height="359" key="GridCell.Tab.1.left/0.0.1366.728/1366.-547.1920.1040@1366.-547.1920.1040" timestamp="1603292293740" />
+    <state width="1323" height="220" key="GridCell.Tab.1.left/0.0.1366.728/1428.-547.1858.1080@0.0.1366.728" timestamp="1603222188584" />
+    <state width="1815" height="359" key="GridCell.Tab.1.left/0.0.1366.728/1428.-547.1858.1080@1428.-547.1858.1080" timestamp="1603289052419" />
+    <state width="945" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1602988867566" />
+    <state width="1323" height="219" key="GridCell.Tab.1.right" timestamp="1603319463390">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="936" height="223" key="GridCell.Tab.1.right/0.0.1366.728/-1920.-309.1920.1040@0.0.1366.728" timestamp="1603036907742" />
+    <state width="1323" height="219" key="GridCell.Tab.1.right/0.0.1366.728/1366.-547.1920.1040@0.0.1366.728" timestamp="1603319463390" />
+    <state width="1815" height="359" key="GridCell.Tab.1.right/0.0.1366.728/1366.-547.1920.1040@1366.-547.1920.1040" timestamp="1603292293740" />
+    <state width="1323" height="220" key="GridCell.Tab.1.right/0.0.1366.728/1428.-547.1858.1080@0.0.1366.728" timestamp="1603222188584" />
+    <state width="1815" height="359" key="GridCell.Tab.1.right/0.0.1366.728/1428.-547.1858.1080@1428.-547.1858.1080" timestamp="1603289052419" />
+    <state width="945" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1602988867566" />
+    <state x="1827" y="-382" key="SettingsEditor" timestamp="1603060650514">
+      <screen x="1366" y="-547" width="1920" height="1040" />
+    </state>
+    <state x="1827" y="-382" key="SettingsEditor/0.0.1366.728/1366.-547.1920.1040@1366.-547.1920.1040" timestamp="1603060650514" />
+    <state x="1930" y="-417" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1603120693420">
+      <screen x="1366" y="-547" width="1920" height="1040" />
+    </state>
+    <state x="1930" y="-417" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728/1366.-547.1920.1040@1366.-547.1920.1040" timestamp="1603120693420" />
+    <state x="1852" y="-477" width="945" height="969" key="search.everywhere.popup" timestamp="1603314382324">
+      <screen x="1366" y="-547" width="1920" height="1040" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/-1920.-309.1920.1040@0.0.1366.728" timestamp="1603035399810" />
+    <state x="1852" y="-477" width="945" height="969" key="search.everywhere.popup/0.0.1366.728/1366.-547.1920.1040@1366.-547.1920.1040" timestamp="1603314382324" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/myPlotWidget.py</url>
+          <line>10</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app.py</url>
+          <line>117</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app.py</url>
+          <line>126</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/sensorFusion.py</url>
+          <line>78</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app.py</url>
+          <line>111</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/sensor_fusion_python$gui.coverage" NAME="gui Coverage Results" MODIFIED="1603134292724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/sensor_fusion_python$qtmplex.coverage" NAME="qtmplex Coverage Results" MODIFIED="1603139250224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/sensor_fusion_python$sensorFusion.coverage" NAME="sensorFusion Coverage Results" MODIFIED="1603220415587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/sensor_fusion_python$app.coverage" NAME="app Coverage Results" MODIFIED="1603320269602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/sensor_fusion_python$gui_temp.coverage" NAME="gui_temp Coverage Results" MODIFIED="1603310812022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/sensor_fusion_python$sensor_fusion.coverage" NAME="sensor-fusion Coverage Results" MODIFIED="1603061573270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/sensor_fusion_python$qttuto.coverage" NAME="qttuto Coverage Results" MODIFIED="1603063722243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/sensor_fusion_python$uart_config.coverage" NAME="uart_config Coverage Results" MODIFIED="1603286276366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/designer" />
+  </component>
+</project>
