@@ -10,7 +10,9 @@ QUEUE_SIZE = 128  # 0 for no limit
 
 
 def to_euler_angles(q):
-    x, y, z, w = q.swapaxes(0, 1)
+    if len(q.shape) == 2:
+        q = q.swapaxes(0, 1)
+    x, y, z, w = q
     t0 = +2.0 * (w * x + y * z)
     t1 = +1.0 - 2.0 * (x * x + y * y)
     yaw = np.arctan2(t0, t1)
