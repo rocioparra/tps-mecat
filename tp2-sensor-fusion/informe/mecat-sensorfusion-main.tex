@@ -13,21 +13,16 @@
 \input{mecat-sensorfusion-cover}
 
 %\newgeometry{a4paper, total={7in, 9.25in}, footskip=25px}
-% indice:
-\tableofcontents
 %\newpage
 
-\section{Consigna}
-\begin{itemize}
-	\item Diagrama de bloques de los dos programas
-	\item Sincronizaci\'on
-	\item Presentar gr\'aficos obtenidos
-	\item Video
-\end{itemize}
 
 \section{Funcionamiento}
 
 \subsection{Programa del microcontrolador}
+
+El programa del microcontrolador funciona realizando \emph{polling} en el estado de un timer. Este timer, configurado para activarse cada 0.01s, marca el tiempo de muestreo. 
+
+Cada vez que se detecta un evento de timeout (a trav\'es del cambio de una variable booleana en una interrupci\'on), se lee el estado de los sensores del MPU6500. Tal como se observa en la \autoref{fig:cprog}, esto se realiza con protocolo I2C.
 
 \begin{figure}[ht]
 	\centering
@@ -35,6 +30,11 @@
 	\caption{Diagrama de bloques del programa del microcontrolador}
 	\label{fig:cprog}
 \end{figure}
+
+Una vez obtenidos los 6 valores de los sensores (las componentes $x$, $y$ y $z$ del aceler\'ometro, y del giroscopio), se utilizan para obtener el nuevo valor de las cuatro componentes del cuaterni\'on que describe la orientaci\'on del MPU, utilizando el algoritmo IMU de Madgwick. Una vez calculado esto, se comunican la totalidad de los 10 valores obtenidos a trav\'es del USART0 (como se explicar\'a en la pr\'oxima secci\'on).
+
+
+
 
 \subsection{Programa de la computadora}
 
@@ -45,6 +45,15 @@
 	\label{fig:pyprog}
 \end{figure}
 
+La estructura del programa que corre en la computadora puede observarse en la \autoref{fig:pyprog}. La sincronizaci\'on con los mensajes obtenidos a trav\'es del puerto serie se realiza con un thread dedicado, para asegurarse de que ning\'un paquete se pierda. Este thread interact\'ua con el resto del programa a trav\'es de dos objetos:
+\begin{itemize}
+	\item una \emph{queue} FIFO, donde se guarda cada paquete con el formato correcto que se recibe (esto se explicar\'a m\'as detalladamente en la pr\'oxima secci\'on). A su vez, si se detecta un problema con el puerto serie, tambi\'en se comunica a trav\'es de esta \emph{queue} para que se pueda lidiar con la excepci\'on apropiadamente
+	\item un evento binario (set o cleared), que el programa enciende para indicarle al thread que debe terminar de ejecutar.  
+\end{itemize}
+
+El programa principal recibe de la GUI se\~nales que indican qu\'e puerto serie debe utilizarse, cu\'ando conectarse y desconectarse, y cu\'ando empezar a graficar los resultados, y si se desea congelar los gr\'aficos. Dichos gr\'aficos se actualizan cada vez que se activa un timer, cuya frecuencia determina el frame rate. Cada vez que ocurre un evento de timeout, se obtiene toda la informaci\'on que haya llegado por UART, se calculan los \'angulos de pitch y roll, y se muestran los resultados. 
+
+A su vez, si se detectase un problema con la conexi\'on al puerto serie, se le avisar\'a al usuario que hubo un error y se desconectar\'a y dejar\'a de graficar autom\'aticamente. El programa queda entonces esperando a que se vuelva a conectar a un puerto disponible.
 
 
 \section{Sincronizaci\'on}
@@ -106,6 +115,10 @@ A continuaci\'on se muestra la totalidad del c\'odigo correspondiente a este \em
 	\end{lstlisting}
 \end{center}
 
+
+\section{Videos}
+
+Se adjuntan dos videos que demuestran el funcionamiento del programa. El primero de ellos explica c\'omo se usa la interfaz gr\'afica. El segundo muestra los gr\'aficos obtenidos para distintas orientaciones del MPU. Este \'ultimo video tambi\'en explica c\'omo distintos movimientos se observan en cada sensor, y en las estimaciones de los \'angulos de \emph{pitch} y \emph{roll}.
 
 
 \end{document}
