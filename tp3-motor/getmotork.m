@@ -1,0 +1,1 @@
+data = csvread("lazoabierto100.csv");
